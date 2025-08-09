@@ -6,6 +6,7 @@ Desarrollo punto 4
 
 a): Recibir bien sea un listado de archivos HTML a procesar o un listado de directorios en los cuales se encuentran archivos HTML para procesar (incluyendo subdirectorios)
 
+```python
 def seek_and_store_html(lista):
     bd_html = [] #lista vacia
     for i in lista:
@@ -18,5 +19,6 @@ def seek_and_store_html(lista):
                         bd_html.append(os.path.join(dirpath, file))
     
     return bd_html
-  
+ ```
+ 
 b): Recorrer el listado completo de archivos HTML y determinar para cada archivo cuáles son las imágenes que tiene asociadas (puede asumir que todas se encuentran con el tag ) y convertirlas a base64 (https://en.wikipedia.org/wiki/Base64).
