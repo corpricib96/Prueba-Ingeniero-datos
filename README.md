@@ -4,7 +4,7 @@ Desarrollo de prueba vacante - Ingeniero de datos
 
 ### Desarollo punto 3
 Cargue de data
-Del archivo insumo original rachas.xlsx , extrae cada hoja , se guardan en formato csv y se suben a la bodega , este es el ejemplo con la primera hoja
+Del archivo insumo original rachas.xlsx se extraen las dos hojas (historia-retiros), se guardan en formato csv y se suben a la bodega a traves del siguiente script:
 
 ```python
 import pandas as pd
@@ -44,6 +44,32 @@ VALUES
 values = df.values.tolist()
 cursor.fast_executemany = True
 cursor.executemany(sql_insert, values)
+
+df2 = pd.read_csv(r"C:\Users\EQP1RIS\Desktop\retiros.csv",sep=';')
+
+sql_create ='''
+CREATE EXTERNAL TABLE temporal.bd_retiros_prueba (
+identificacion STRING,
+fecha_retiro STRING
+)
+STORED AS PARQUET
+'''
+
+cursor.execute(sql_create)
+
+sql_insert = '''
+INSERT INTO temporal.bd_retiros_prueba (
+identificacion,
+fecha_retiro
+)
+VALUES
+(?,?)
+'''
+
+values2 = df2.values.tolist()
+cursor.fast_executemany = True
+cursor.executemany(sql_insert, values2)
+
 
 ```
 
