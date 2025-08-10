@@ -203,3 +203,35 @@ def seek_and_store_html(lista):
  ```
  
 b): Recorrer el listado completo de archivos HTML y determinar para cada archivo cuáles son las imágenes que tiene asociadas (puede asumir que todas se encuentran con el tag ) y convertirlas a base64 (https://en.wikipedia.org/wiki/Base64).
+
+
+```python
+import os
+import re
+import base64
+
+
+# Encuentra en las etiquetas <img> el archvio de la imagen
+patron = re.compile(r'<img[^>]+src="([^">]+)"')
+
+# Diccionario
+imagenes_base64 = {}
+
+for i in bd_html:
+    with open(i, "r", encoding="utf-8") as img:
+        html = img.read()
+
+        # Buscar imágenes
+        bases_img = patron.findall(html)
+        lista_64 = []
+
+        for x in bases_img:
+            with open(x, "rb") as img:
+                cod_64 = base64.b64encode(img.read()).decode("utf-8")
+                lista_64.append((x, cod_64))
+
+imagenes_base64[i] = base64_images
+```
+
+c): Reemplazar las imágenes originales del HTML por las codificadas en base64, sin sustituir el archivo
+original, es decir, creando uno nuevo.
