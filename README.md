@@ -1,5 +1,6 @@
-# Prueba-Ingeniero-datos
-Desarrollo de prueba vacante - Ingeniero de datos
+# Desarrollo de prueba - Ingeniero de datos
+# Ricardo Isaza Barrera
+
 
 
 ### Desarollo punto 1
