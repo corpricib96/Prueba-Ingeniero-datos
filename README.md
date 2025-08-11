@@ -16,9 +16,9 @@ dataset será utilizado para mejorar la comunicación y el servicio al cliente.
 
 4.	Procedemos a aplicar validaciones de formatos:
 
-•	Los campos de números sean formato numérico 
-•	Los campos tengan las longitudes correspondientes a números celulares y teléfonos fijos
-•	Comprobar que no haya registros con los campos en nulos
+* Los campos de números sean formato numérico 
+* Los campos tengan las longitudes correspondientes a números celulares y teléfonos fijos
+* Comprobar que no haya registros con los campos en nulos
 
 5.	Al comprobar que todo cumpla con lo esperado , procedemos a integrarlo al datalake para consumo del cliente final
 
