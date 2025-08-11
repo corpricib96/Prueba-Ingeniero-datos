@@ -30,6 +30,11 @@ conceptual un mecanismo/herramienta que permita hacer veeduría de la calidad de
 dato, etc. Esta será un recurso para los equipos de negocio para obtener KPI's acerca de los télefonos de los
 clientes.
 
+- Que tengan los prefijos validos
+- Que tengan la cantidad correcta de dígitos
+- Que el mismo número no se encuentre repetido entre clientes
+- Comprobar la existencia de Nulos
+- Validar que dentro de los valores no se incluyan caracteres no numéricos
 
 
 ### Desarollo punto 3
