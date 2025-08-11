@@ -2,6 +2,36 @@
 Desarrollo de prueba vacante - Ingeniero de datos
 
 
+### Desarollo punto 1
+Diseñar e implementar un proceso automatizado y controlado mediante prácticas de CI/CD para la creación,
+validación, despliegue y mantenimiento de un dataset confiable de números de teléfono de clientes. Este
+dataset será utilizado para mejorar la comunicación y el servicio al cliente.
+
+
+1.	Se construye un query SQL en donde se integran las diferentes fuentes de donde se extraen los clientes de la compañía y sus respectivos números de contacto, aplicamos filtros de negocio de ser necesarios y dejamos el resultado final a nivel cliente.
+
+2.	Procedemos a ejecutar el query para determinar que no contiene fallos , en caso de darse algun inconveniente devolverse al paso a la construcción del query
+
+3.	Validamos tiempos de ejecución y consumo de recursos , en caso de ser necesario, replantear la construcción del datset
+
+4.	Procedemos a aplicar validaciones de formatos:
+
+•	Los campos de números sean formato numérico 
+•	Los campos tengan las longitudes correspondientes a números celulares y teléfonos fijos
+•	Comprobar que no haya registros con los campos en nulos
+
+5.	Al comprobar que todo cumpla con lo esperado , procedemos a integrarlo al datalake para consumo del cliente final
+
+
+
+### Desarollo punto 2
+Con base en el resultado del ejercicio conceptual de creación de dataset, plantea también de forma
+conceptual un mecanismo/herramienta que permita hacer veeduría de la calidad de datos, trazabilidad del
+dato, etc. Esta será un recurso para los equipos de negocio para obtener KPI's acerca de los télefonos de los
+clientes.
+
+
+
 ### Desarollo punto 3
 Cargue de data
 Del archivo insumo original rachas.xlsx se extraen las dos hojas (historia-retiros), se guardan en formato csv y se suben a la bodega a traves del siguiente script:
@@ -235,3 +265,10 @@ imagenes_base64[i] = base64_images
 
 c): Reemplazar las imágenes originales del HTML por las codificadas en base64, sin sustituir el archivo
 original, es decir, creando uno nuevo.
+
+--Sin resolver
+
+d): Debe generar un objeto que contenga la lista de imágenes procesadas de forma exitosa y las que
+fallaron
+
+--Sin resolver
